@@ -22,14 +22,14 @@
 <script language="JavaScript" type="text/javascript">
 //End Include User Scripts
 
-//Handle saconsultsacon_DOBInlineDatePicker1 @13-FC2D4B6E
+//Handle saconsultsacon_DOBInlineDatePicker1 @14-FC2D4B6E
 function saconsultsacon_DOBInlineDatePicker1_start(sender) {
     if (!sender || sender === window) return;
     generateDatePicker(sender.id, "yyyy-mm-dd","");
 }
 //End Handle saconsultsacon_DOBInlineDatePicker1
 
-//Handle saconsultsacon_TOBInlineDatePicker2 @15-463A710C
+//Handle saconsultsacon_TOBInlineDatePicker2 @18-463A710C
 function saconsultsacon_TOBInlineDatePicker2_start(sender) {
     if (!sender || sender === window) return;
     generateDatePicker(sender.id, "HH:nn:ss","");
@@ -63,7 +63,7 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
           </tr>
         </table>
  
-        <table class="RecordSimple" cellspacing="0" cellpadding="0">
+        <table class="RecordSimple" style="HEIGHT: 231px; WIDTH: 319px" cellspacing="0" cellpadding="0">
           <!-- BEGIN Error -->
           <tr class="ErrorSimple">
             <td colspan="2">{Error}</td>
@@ -106,7 +106,7 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
  
           <tr class="BottomSimple">
             <td style="TEXT-ALIGN: right" colspan="2">
-              <!-- BEGIN Button Button_Insert --><input type="submit" id="saconsultButton_Insert" class="ButtonSimple" alt="Add" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Insert --><input type="submit" id="saconsultButton_Insert" class="ButtonSimple" style="HEIGHT: 24px; WIDTH: 272px" alt="Add" size="64" value="Submit Query" name="{Button_Name}"><!-- END Button Button_Insert -->
               <!-- BEGIN Button Button_Update --><input type="submit" id="saconsultButton_Update" class="ButtonSimple" alt="Submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update --></td>
           </tr>
         </table>
