@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>contactForm</title>
+<meta name="GENERATOR" content="CodeCharge Studio 5.0.0.16254">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A328438A
+</script>
+<script language="JavaScript" src="js/yui/build/yahoo-dom-event/yahoo-dom-event.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/yui/build/calendar/calendar-min.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/yui/datepicker-commons.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="{CCS_PathToMasterPage}ccs-yui-calendar.css">
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Handle saconsultsacon_DOBInlineDatePicker1 @13-FC2D4B6E
+function saconsultsacon_DOBInlineDatePicker1_start(sender) {
+    if (!sender || sender === window) return;
+    generateDatePicker(sender.id, "yyyy-mm-dd","");
+}
+//End Handle saconsultsacon_DOBInlineDatePicker1
+
+//Handle saconsultsacon_TOBInlineDatePicker2 @15-463A710C
+function saconsultsacon_TOBInlineDatePicker2_start(sender) {
+    if (!sender || sender === window) return;
+    generateDatePicker(sender.id, "HH:nn:ss","");
+}
+//End Handle saconsultsacon_TOBInlineDatePicker2
+
+//bind_events @1-E82C88A6
+function bind_events() {
+    addEventHandler("saconsultsacon_DOB", "load", saconsultsacon_DOBInlineDatePicker1_start);
+    addEventHandler("saconsultsacon_TOB", "load", saconsultsacon_TOBInlineDatePicker2_start);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+&nbsp; 
+<!-- BEGIN Record saconsult -->
+<form id="saconsult" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="HeaderSimple" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeftSimple"><img alt="" src="Styles/Simple/Images/Spacer.gif"></td> 
+            <td class="thSimple"><strong>Contact Form</strong></td> 
+            <td class="HeaderRightSimple"><img alt="" src="Styles/Simple/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="RecordSimple" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="ErrorSimple">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="ControlsSimple">
+            <td class="thSimple"><label for="saconsultsacon_Name">Name</label></td> 
+            <td><input id="saconsultsacon_Name" maxlength="60" size="50" value="{sacon_Name}" name="{sacon_Name_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsSimple">
+            <td class="thSimple"><label for="saconsultsacon_DOB">Date Of Birth</label></td> 
+            <td><input id="saconsultsacon_DOB" maxlength="100" size="8" value="{sacon_DOB}" name="{sacon_DOB_Name}">&nbsp;YYYY-MM-DD</td>
+          </tr>
+ 
+          <tr class="ControlsSimple">
+            <td class="thSimple"><label for="saconsultsacon_TOB">Time Of Birth</label></td> 
+            <td><input id="saconsultsacon_TOB" maxlength="100" size="8" value="{sacon_TOB}" name="{sacon_TOB_Name}">&nbsp;HH:MM:SS (24hrs)</td>
+          </tr>
+ 
+          <tr class="ControlsSimple">
+            <td class="thSimple"><label for="saconsultsacon_POB">Place of Birth</label></td> 
+            <td><input id="saconsultsacon_POB" maxlength="60" size="50" value="{sacon_POB}" name="{sacon_POB_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsSimple">
+            <td class="thSimple"><label for="saconsultsacon_phone">Phone Number</label></td> 
+            <td><input id="saconsultsacon_phone" maxlength="60" size="50" value="{sacon_phone}" name="{sacon_phone_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsSimple">
+            <td class="thSimple"><label for="saconsultsacon_email">Email</label></td> 
+            <td><input id="saconsultsacon_email" maxlength="60" size="50" value="{sacon_email}" name="{sacon_email_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsSimple">
+            <td class="thSimple"><label for="saconsultsacon_question">Question</label></td> 
+            <td><input id="saconsultsacon_question" maxlength="250" size="50" value="{sacon_question}" name="{sacon_question_Name}"></td>
+          </tr>
+ 
+          <tr class="BottomSimple">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="submit" id="saconsultButton_Insert" class="ButtonSimple" alt="Add" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="submit" id="saconsultButton_Update" class="ButtonSimple" alt="Submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record saconsult --><br>
+&nbsp;&nbsp; 
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Consulting Recording</title>
+<meta name="GENERATOR" content="CodeCharge Studio 5.0.0.16254">
+<link rel="stylesheet" type="text/css" href="Styles/Simple/Style_doctype.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-C09AA1BF
+</script>
+<script language="JavaScript" src="js/yui/build/yahoo-dom-event/yahoo-dom-event.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/yui/build/calendar/calendar-min.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/yui/datepicker-commons.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="Styles/Simple/ccs-yui-calendar.css">
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//saconsult1Button_Delete_OnClick @40-45D71064
+function saconsult1Button_Delete_OnClick()
+{
+    var result = true;
+//End saconsult1Button_Delete_OnClick
+
+//Confirmation Message @41-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close saconsult1Button_Delete_OnClick @40-BC33A33A
+    return result;
+}
+//End Close saconsult1Button_Delete_OnClick
+
+//saconsult1Button_Cancel_OnClick @42-5EA63AF3
+function saconsult1Button_Cancel_OnClick()
+{
+    disableValidation = true;
+    return true;
+}
+//End saconsult1Button_Cancel_OnClick
+
+//Handle saconsultSearchs_sacon_DOBInlineDatePicker1 @32-C067FC22
+function saconsultSearchs_sacon_DOBInlineDatePicker1_start(sender) {
+    if (!sender || sender === window) return;
+    generateDatePicker(sender.id, "yyyy-mm-dd","Simple");
+}
+//End Handle saconsultSearchs_sacon_DOBInlineDatePicker1
+
+//Handle saconsult1sacon_DTRegInlineDatePicker1 @46-E752C35E
+function saconsult1sacon_DTRegInlineDatePicker1_start(sender) {
+    if (!sender || sender === window) return;
+    generateDatePicker(sender.id, "yyyy-mm-dd H:nn:ss","Simple");
+}
+//End Handle saconsult1sacon_DTRegInlineDatePicker1
+
+//Handle saconsult1sacon_DOBInlineDatePicker2 @49-4544F860
+function saconsult1sacon_DOBInlineDatePicker2_start(sender) {
+    if (!sender || sender === window) return;
+    generateDatePicker(sender.id, "yyyy-mm-dd","Simple");
+}
+//End Handle saconsult1sacon_DOBInlineDatePicker2
+
+//Handle saconsult1sacon_TOBInlineDatePicker3 @51-8B1FFB63
+function saconsult1sacon_TOBInlineDatePicker3_start(sender) {
+    if (!sender || sender === window) return;
+    generateDatePicker(sender.id, "H:nn:ss","Simple");
+}
+//End Handle saconsult1sacon_TOBInlineDatePicker3
+
+//Handle saconsult1sacon_DateOfMarriageInlineDatePicker4 @58-B1EB8E47
+function saconsult1sacon_DateOfMarriageInlineDatePicker4_start(sender) {
+    if (!sender || sender === window) return;
+    generateDatePicker(sender.id, "yyyy-mm-dd","Simple");
+}
+//End Handle saconsult1sacon_DateOfMarriageInlineDatePicker4
+
+//bind_events @1-DC3E0140
+function bind_events() {
+    addEventHandler("saconsultSearchs_sacon_DOB", "load", saconsultSearchs_sacon_DOBInlineDatePicker1_start);
+    addEventHandler("saconsult1sacon_DTReg", "load", saconsult1sacon_DTRegInlineDatePicker1_start);
+    addEventHandler("saconsult1sacon_DOB", "load", saconsult1sacon_DOBInlineDatePicker2_start);
+    addEventHandler("saconsult1sacon_TOB", "load", saconsult1sacon_TOBInlineDatePicker3_start);
+    addEventHandler("saconsult1sacon_DateOfMarriage", "load", saconsult1sacon_DateOfMarriageInlineDatePicker4_start);
+    addEventHandler("saconsult1Button_Delete", "click", saconsult1Button_Delete_OnClick);
+    addEventHandler("saconsult1Button_Cancel", "click", saconsult1Button_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>
+<!-- BEGIN Record saconsultSearch -->
+<form id="saconsultSearch" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Simple/Images/Spacer.gif"></td> 
+            <td class="th"><strong>Search </strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Simple/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="saconsultSearchs_sacon_Name">Name</label></td> 
+            <td><input id="saconsultSearchs_sacon_Name" maxlength="60" size="50" value="{s_sacon_Name}" name="{s_sacon_Name_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="saconsultSearchs_sacon_DOB">Date Of Birth</label></td> 
+            <td><input id="saconsultSearchs_sacon_DOB" maxlength="100" size="8" value="{s_sacon_DOB}" name="{s_sacon_DOB_Name}">&nbsp; YYYY-MM-DD</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="saconsultSearchs_sacon_POB">Place Of Birth</label></td> 
+            <td><input id="saconsultSearchs_sacon_POB" maxlength="60" size="50" value="{s_sacon_POB}" name="{s_sacon_POB_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="saconsultSearchs_sacon_phone">Phone</label></td> 
+            <td><input id="saconsultSearchs_sacon_phone" maxlength="60" size="50" value="{s_sacon_phone}" name="{s_sacon_phone_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="saconsultSearchs_sacon_email">Email</label></td> 
+            <td><input id="saconsultSearchs_sacon_email" maxlength="60" size="50" value="{s_sacon_email}" name="{s_sacon_email_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input type="submit" id="saconsultSearchButton_DoSearch" class="Button" alt="Search" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record saconsultSearch --><br>
+<!-- BEGIN Grid saconsult -->
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img alt="" src="Styles/Simple/Images/Spacer.gif"></td> 
+          <td class="th"><strong>List of Consultation form</strong></td> 
+          <td class="HeaderRight"><img alt="" src="Styles/Simple/Images/Spacer.gif"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_sacon_Name --><span class="Sorter"><a href="{Sort_URL}" id="saconsultSorter_sacon_Name">Name</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Simple/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Simple/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_sacon_Name --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_sacon_DOB --><span class="Sorter"><a href="{Sort_URL}" id="saconsultSorter_sacon_DOB">DOB</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Simple/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Simple/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_sacon_DOB --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_sacon_phone --><span class="Sorter"><a href="{Sort_URL}" id="saconsultSorter_sacon_phone">Phone</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Simple/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Simple/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_sacon_phone --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_sacon_email --><span class="Sorter"><a href="{Sort_URL}" id="saconsultSorter_sacon_email">Email</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Simple/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Simple/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_sacon_email --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_sacon_registration --><span class="Sorter"><a href="{Sort_URL}" id="saconsultSorter_sacon_registration">Registration</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Simple/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Simple/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_sacon_registration --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td><a href="{sacon_Name_Src}" id="saconsultsacon_Name_{saconsult:rowNumber}">{sacon_Name}</a>&nbsp;</td> 
+          <td>{sacon_DOB}&nbsp;</td> 
+          <td>{sacon_phone}&nbsp;</td> 
+          <td>{sacon_email}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{sacon_registration}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="5">No records</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="5"><a href="{saconsult_Insert_Src}" id="saconsultsaconsult_Insert">Add New</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator --><span class="Navigator">Records per page 
+            <select onchange="CCChangeSize(this, '{FormName}')" style="VERTICAL-ALIGN: middle" name="{FormName}PageSize">
+              <option selected value="">-</option>
+ {PageSize_Options}
+            </select>
+ 
+            <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+            <!-- BEGIN First_Off -->First <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of &nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off -->Last <!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid saconsult --><br>
+<!-- BEGIN Record saconsult1 -->
+<form id="saconsult1" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Simple/Images/Spacer.gif"></td> 
+            <td class="th"><strong>Add/Edit Consultation Form</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Simple/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="4">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="saconsult1sacon_registration">Registration</label></td> 
+            <td><input id="saconsult1sacon_registration" maxlength="10" size="10" value="{sacon_registration}" name="{sacon_registration_Name}">&nbsp;</td> 
+            <td>&nbsp;<label for="saconsult1sacon_DTReg">Date of Registration</label></td> 
+            <td><input id="saconsult1sacon_DTReg" style="HEIGHT: 22px; WIDTH: 131px" maxlength="100" size="8" value="{sacon_DTReg}" name="{sacon_DTReg_Name}">&nbsp;YYYY-MM-DD H:nn:ss</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="saconsult1sacon_DTReg"><label for="saconsult1sacon_Name">Name</label></label></td> 
+            <td>&nbsp;<input id="saconsult1sacon_Name" maxlength="60" size="50" value="{sacon_Name}" name="{sacon_Name_Name}"></td> 
+            <td>&nbsp;<label for="saconsult1sacon_DOB">Date Of Birth</label></td> 
+            <td><input id="saconsult1sacon_DOB" maxlength="100" size="8" value="{sacon_DOB}" name="{sacon_DOB_Name}">&nbsp;YYYY-MM-DD</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="saconsult1sacon_POB">Place of Birth</label><label for="saconsult1sacon_Name">&nbsp;</label></td> 
+            <td>&nbsp;<input id="saconsult1sacon_POB" maxlength="60" size="50" value="{sacon_POB}" name="{sacon_POB_Name}"></td> 
+            <td>&nbsp;<label for="saconsult1sacon_TOB">Time of Birth</label></td> 
+            <td><input id="saconsult1sacon_TOB" maxlength="100" size="8" value="{sacon_TOB}" name="{sacon_TOB_Name}">HH:MM:SS</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="saconsult1sacon_DOB"><label for="saconsult1sacon_phone">Phone</label></label></td> 
+            <td>&nbsp;<input id="saconsult1sacon_phone" maxlength="60" size="50" value="{sacon_phone}" name="{sacon_phone_Name}"></td> 
+            <td>&nbsp;<label for="saconsult1sacon_email">Email</label></td> 
+            <td><input id="saconsult1sacon_email" maxlength="60" size="50" value="{sacon_email}" name="{sacon_email_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="saconsult1sacon_TOB"><label for="saconsult1sacon_address1">Address1</label></label></td> 
+            <td>&nbsp;<input id="saconsult1sacon_address1" maxlength="60" size="50" value="{sacon_address1}" name="{sacon_address1_Name}"></td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="saconsult1sacon_address2">Address2</label><label for="saconsult1sacon_POB">&nbsp;</label></td> 
+            <td>&nbsp;<input id="saconsult1sacon_address2" maxlength="60" size="50" value="{sacon_address2}" name="{sacon_address2_Name}"></td> 
+            <td>&nbsp;</td> 
+            <td></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="saconsult1sacon_phone">Date of Marriage </label></td> 
+            <td>&nbsp;<input id="saconsult1sacon_DateOfMarriage" maxlength="100" size="8" value="{sacon_DateOfMarriage}" name="{sacon_DateOfMarriage_Name}"></td> 
+            <td>&nbsp;<label for="saconsult1sacon_noChildB">Children</label></td> 
+            <td><input id="saconsult1sacon_noChildB" maxlength="10" size="10" value="{sacon_noChildB}" name="{sacon_noChildB_Name}">&nbsp;Boy(s)&nbsp;&nbsp; &nbsp;<input id="saconsult1sacon_noChildG" maxlength="10" size="10" value="{sacon_noChildG}" name="{sacon_noChildG_Name}">&nbsp;Girl(s)</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="saconsult1sacon_email"><label for="saconsult1sacon_education">Education</label></label></td> 
+            <td>&nbsp;<input id="saconsult1sacon_education" maxlength="60" size="50" value="{sacon_education}" name="{sacon_education_Name}"></td> 
+            <td>&nbsp;<label for="saconsult1sacon_profession">Profession</label></td> 
+            <td><input id="saconsult1sacon_profession" maxlength="60" size="50" value="{sacon_profession}" name="{sacon_profession_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="saconsult1sacon_address1"><label for="saconsult1sacon_reference">Reference</label></label></td> 
+            <td>&nbsp;<input id="saconsult1sacon_reference" maxlength="60" size="50" value="{sacon_reference}" name="{sacon_reference_Name}"></td> 
+            <td>&nbsp;</td> 
+            <td></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="saconsult1sacon_address2"><label for="saconsult1sacon_question">Question</label></label></td> 
+            <td>&nbsp;<input id="saconsult1sacon_question" style="HEIGHT: 121px; WIDTH: 327px" maxlength="250" size="50" value="{sacon_question}" name="{sacon_question_Name}"></td> 
+            <td>&nbsp;<label for="saconsult1sacon_notes">Notes</label></td> 
+            <td><input id="saconsult1sacon_notes" style="HEIGHT: 125px; WIDTH: 327px" maxlength="250" size="50" value="{sacon_notes}" name="{sacon_notes_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="4">
+              <!-- BEGIN Button Button_Insert --><input type="submit" id="saconsult1Button_Insert" class="Button" alt="Add" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="submit" id="saconsult1Button_Update" class="Button" alt="Submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input type="submit" id="saconsult1Button_Delete" class="Button" alt="Delete" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" id="saconsult1Button_Cancel" class="Button" alt="Cancel" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record saconsult1 --><br>
+</p>
+</body>
+</html>
