@@ -1256,11 +1256,15 @@ $PathToRoot = "./";
 $Charset = $Charset ? $Charset : "windows-1252";
 //End Initialize Page
 
+//Include events file @1-D30AE812
+include_once("./soniacon_events.php");
+//End Include events file
+
 //Before Initialize @1-E870CEBC
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-9ADDCCD6
+//Initialize Objects @1-94DBA273
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -1276,6 +1280,8 @@ $MainPage->saconsultSearch = & $saconsultSearch;
 $MainPage->saconsult1 = & $saconsult1;
 $saconsult->Initialize();
 $saconsult1->Initialize();
+
+BindEvents();
 
 $CCSEventResult = CCGetEvent($CCSEvents, "AfterInitialize", $MainPage);
 
